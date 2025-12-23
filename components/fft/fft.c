@@ -63,7 +63,7 @@ fft_config_t *fft_init(int size, fft_type_t type, fft_direction_t direction, flo
 
   // start configuration
   config->flags = 0;
-  config->type = type;
+  config->type = type == FFT_REAL ? FFT_REAL : FFT_COMPLEX; 
   config->direction = direction;
   config->size = size;
 
